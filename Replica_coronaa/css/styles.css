@@ -1,0 +1,263 @@
+html {
+    font-size: 62.5%;
+    /* height: 100%; */
+}
+
+body {
+    font-size: 16px;
+    /* scrollbar-width: none; */
+}
+
+/* body::-webkit-scrollbar {
+    display:none;
+    
+} */
+
+.header {
+    background-color: #005eb8;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1px;
+    height: 46px;
+}
+
+.header h1 {
+
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "Brandon Text W01 Light",'Franklin Gothic Medium',sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.workspace {
+    background-color: #e1e1e1;
+
+    /* centrar texto de trabajo */
+    padding: 100px;
+    text-align: center;
+
+    /* centrar contenido a futuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-grow: 1;
+}
+
+.footer {
+    background-color: #005eb8;
+    color: white;
+    padding: 0.1rem;
+    font-family: "Brandon Text W01 Light",'Franklin Gothic Medium',sans-serif;
+    font-weight: 500;
+    color: white;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1px;
+    height: 46px;
+   
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+    /* border: 4px solid black; */
+    /* con repeat queda 50/50 las 2 columnas */
+    /* grid-template-columns: repeat(2,1fr);  */
+    
+    /* grid-template-rows: repeat(1,1fr); */
+    
+    /* (1 modo) faltan px el auto sustituye al 29% faltante */
+    /* grid-template-columns: 71% auto; */
+    
+    /* (2 modo) pixel perfect (964px-236px) pero el auto sustituye al 236 es = */
+    display: grid;
+    grid-template-columns: 964px auto;
+    min-height: 100vh;
+    /* height: 100%; */
+    
+}
+
+/* CONTENEDOR IZQUIERDO */
+.viewport {
+    /* border: 4px solid green; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTENEDOR DERECHO */
+.panel {
+    /* border: 4px solid yellow; */
+    display: grid;
+
+    /* con repeat queda 50/50 las 2 columnas */
+    /* grid-template-columns: repeat(2,1fr); */
+
+    grid-template-columns: 161px auto;
+    
+
+}
+
+/* ----------- parte izquierda de CONTENEDOR DERECHO(|<-|) ------------*/
+.menu-container {
+    /* border: 1px solid blue; */
+
+    /* NOTA: parece que este está sobre el container viewport */
+    background-color: #d3d3d3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    
+}
+
+.user-area {
+    cursor: pointer;
+    font-family: "Brandon Text W01 Light",'Franklin Gothic Medium',sans-serif;
+    height: 44px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    /* border: 2px solid black; */
+}
+
+
+.menu-opciones {
+    /* border: 2px solid black; */
+    font-family: "Brandon Text W01 Light",'Franklin Gothic Medium',sans-serif;
+    margin-top: 20%;
+    
+    /* 220px */
+    height: auto;
+    
+}
+
+.menu-estilos {
+    text-align:left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo cuando el mouse está sobre el elemento */
+.menu-estilos li:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo al pasar el mouse sobre el elemento */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+}
+
+/* Estilo cuando el elemento está activo (después de hacer clic) */
+.menu-estilos li:active {
+    background-color: #a0a0a0; /* Cambia el color de fondo cuando el elemento está activo */
+}
+
+.active {
+    cursor: pointer;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    text-align: -webkit-match-parent;
+    font-size: 15pt;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items:start;
+
+    /* Separacion de icono custom en menú de listas */
+    padding-left: 2px;
+
+}
+
+.active::before {
+    content: "▶";/* sombolo custom de listado */
+    padding-right: 8px;
+    
+    color: #005eb8; /* color de símbolo */
+    cursor: pointer;
+}
+
+.terminos-legales {
+    font-size: 10pt;
+    width: 145px;
+    padding: 4px;
+    font-family: 'BrandonTextLight','Franklin Gothic Medium',sans-serif;
+    font-weight:100;
+
+    margin-bottom: 19px;
+    /* border: 2px solid black; */
+}
+
+.terminos-legales a {
+    cursor: pointer;
+}
+/* -----------FIN parte izquierda de CONTENEDOR DERECHO (|<-|) ------------*/
+
+
+
+/* -----------parte derecha de CONTENEDOR DERECHO(|->|) ------------*/
+.areaselectiva-container {
+    background-color: #f0f0f0;
+    /* border: 2px solid red; */
+    
+    display: flex;
+    flex-direction: column;
+
+    /* ESTE era el detalle del largo (si lo pongo en auto se alarga por el contenido, pero está bien también*/
+    height: 697px;
+}
+
+
+
+.logo {
+    
+    /* border: 2px solid yellow; */
+    padding-top: 44px;
+
+    padding-bottom: 44px;
+    /* margin-top: 30px; */
+
+    display: flex;
+    justify-content: center;
+}
+
+.separador {
+    /* border: 2px solid black; */
+    /* Acomodando el separador para que se acomode automaticamente al grosor y alto del container padre */
+    width: auto;
+    height: 10px;
+    background-color: #005eb8;
+    display: flex;
+    flex-direction: row;
+}
+/* .card-container {
+
+    width: auto;
+    border: 2px solid #000000;
+
+    Scroll vertical de cartas
+    overflow-y:scroll;
+} */
+
+.option-card {
+    /* border: 2px solid yellowgreen; */
+    /* el original era de height: calc(100vh - 248px); */
+    height: calc(100vh - auto);
+    overflow-y: auto;
+}
+
+.card {
+    margin-top: 22px;
+    cursor: pointer;
+    font-family: 'BrandonTextLight','Franklin Gothic Medium',sans-serif;
+    text-align: center;
+}
+
+/* -----------FIN parte derecha de CONTENEDOR DERECHO(|->|) ------------*/

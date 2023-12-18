@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Colombia | Mi proyecto</title>
+    <!-- Font de corona -->
+    <link href="https://db.onlinewebfonts.com/c/48fd2f156efe129d588cfa04f0bbc357?family=Brandon+Text+W01+Light"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- -------------------- -->
+    <style>
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ajusta la altura del contenedor*/
+        }
+
+        .option-card {
+            display: flex;
+            flex-direction: column; /* Cambia la dirección del eje principal a columna */
+            align-items: center; /* Centra los elementos horizontalmente */
+        }
+
+        .card {
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease-in-out;
+            margin-bottom: 10px; /* Añade un margen inferior entre las tarjetas */
+        }
+
+        .card:hover,
+        .card.selected {
+            border-color: blue; /* cambiar el color de borde*/
+        }
+    </style>
+    <script>
+        // Agregar un event listener para cada elemento con la clase "card"
+        document.querySelectorAll('.card').forEach(function(card) {
+            card.addEventListener('click', function() {
+                // Alternar la clase 'selected' al hacer clic en una tarjeta
+                this.classList.toggle('selected');
+            })
+        });
+    </script>
+    <!-- -------------------- -->
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="viewport">
+
+            <header class="header">
+                <h1>MI PROYECTO CORONA - BALDOSAS PERSONALIZADAS</h1>
+            </header>
+
+            <main class="workspace">
+                <!-- Aquí va el espacio gris  -->
+                <h2>ESPACIO DE TRABAJO</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Iure voluptas totam magnam laudantium.
+                    Provident </p>
+            </main>
+
+            <footer class="footer">
+                <h3>FOOTER</h3>
+            </footer>
+
+        </div>
+
+        <div class="panel">
+            <div class="menu-container">
+
+                <div class="user-area">
+                    <svg class="icon" viewBox="0 130 512 324" style="width: 32px; height: 32px;">
+                        <path
+                            d="m267 270c60 0 110-49 110-110 0-61-50-110-110-110-61 0-110 49-110 110 0 61 49 110 110 110z m0-28c-46 0-82-37-82-82 0-45 36-82 82-82 45 0 82 37 82 82 0 45-37 82-82 82z m216 183c-11-87-53-135-135-140-3 0-6 0-8 2-22 15-47 22-73 22-27 0-52-7-73-22-3-2-6-2-9-2-82 5-123 53-135 140-1 8 6 16 14 16l405 0c9 0 15-8 14-16z m-403-12c12-63 43-95 102-100 25 16 54 24 85 24 30 0 59-8 84-24 59 5 90 37 102 100z">
+                        </path>
+                    </svg>
+                    <p class="loggedin">César</p>
+                </div>
+
+                <div class="menu-opciones">
+                    <ul class="menu-estilos">
+                        <li class="active"> 1.Uso/Acabado</li>
+                        <li class="active"> 2.Diseño</li>
+                        <li class="active"> 3.Composición</li>
+                        <li class="active"> 4.Simulación</li>
+                        <li class="active"> 5.Formato</li>
+                        <li class="active"> 6.Cotización</li>
+                    </ul>
+                </div>
+
+                <div class="terminos-legales">
+                    <b>Legales</b>
+                    <br>
+                    <a href="https://corona.co/terminos-condiciones">Términos y Condiciones</a>
+                    <br>
+                    <a
+                        href="https://corona.co/medias/Politica-Tratamiento-de-Datos-Personales-V6-1.pdf?context=bWFzdGVyfGRvY3VtZW50c3wyNjE3OTd8YXBwbGljYXRpb24vcGRmfGgxOS9oZjEvOTE0NTU1ODQwMTA1NC9Qb2xpdGljYS1UcmF0YW1pZW50by1kZS1EYXRvcy1QZXJzb25hbGVzLVY2LTEucGRmfDY1OTFhOGQzNTY1ZDNhZDMzOGFkZmE1ZjE3NjYzNzI3OGM2ZjE2MmM4MDY5ODZlMmEzYjVjYTBjOGQ5MmE4MjY">Política
+                        de Tratamiento de Datos</a>
+                    <br>
+                </div>
+            </div>
+
+            <div class="areaselectiva-container">
+
+                <div class="logo">
+                    <img id="logocorona" src="https://miproyecto.corona.co/res/gui/logoblue.jpg"
+                        style="height: 160px; cursor: pointer;">
+                </div>
+                <div class="separador">
+                    
+                </div>
+                <!-- <div class="card-container"> -->
+                    <div class="option-card">
+                        <div class="card">
+                            <div
+                                style="display: inline-block; background: url(https://miproyecto.corona.co/scenes/scene02.jpg) center center / cover no-repeat; width: 120px; height: 120px;">
+                            </div>
+                            <br>Pared Mate
+                        </div>
+                        <div class="card">
+                            <div
+                                style="display: inline-block; background: url(https://miproyecto.corona.co/scenes/scene05.jpg) center center / cover no-repeat; width: 120px; height: 120px;">
+                            </div>
+                            <br>Pared Semi-Brillante
+                        </div>
+                        <div class="card">
+                            <div
+                                style="display: inline-block; background: url(https://miproyecto.corona.co/scenes/scene07.jpg) center center / cover no-repeat; width: 120px; height: 120px;">
+                            </div>
+                            <br>Piso Mate
+                        </div>
+                        <div class="card">
+                            <div
+                                style="display: inline-block; background: url(https://miproyecto.corona.co/scenes/scene06.jpg) center center / cover no-repeat; width: 120px; height: 120px;">
+                            </div>
+                            <br>Piso Semi-brillante
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
